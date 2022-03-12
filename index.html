@@ -17,10 +17,7 @@
                     <a href="#aboutMe">About Me</a>
                 </li>
                 <li>
-                    <a href="#">Resume</a>
-                </li>
-                <li>
-                    <a href="#work">Work</a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
@@ -36,8 +33,8 @@
     </header>
     
     <section>
-        <section class="content" id="aboutMe">
-            <h2>About Me</h2>
+        <!--Made section class = aboutMe-->
+        <section class="aboutMe">
              <p>
                 I am originally from the island of Puerto Rico, where I have lived for most of my life. It wasn't until 2018, when I got a job opportunity in Miami, and left the island to live in the states. It was hard to let go of friends and family but it was a career choice that benefit me at the time.
              </p>
@@ -45,18 +42,20 @@
              <P>I have many friends who do this for a living and they have all told me about the industry. I am very much intrigued and it is something that I have found to enjoy doing very much. Maybe, it is in my genes. After all, my father was also in the computer science industry all his career until he retired and he loved it. In fact, I remember as a child when he brought home one of the first desktop models for beta testing. In school I learned to code in QBasic, although I don't remember most of it and it doesn't really matter since it is an extinct language.</P>
              <p>Today, I am setting myself on a new career path in the programming world. I expect it to be a challengeing one and I wouldn't have it any other way. I also expect it to be lots of fun and exciting. Let's code!!</p>
         </section>
-        <section class="content" id="work">
-            <h2>Work</h2>
-                <section class="container">
+        <!--Made section class = portfolio-->
+        <section class="row justify-center">
+            <section class="pics-column">
+                <section class="flex-container">
                     <img class="pics" id="first-code" src="https://freerangestock.com/sample/113050/coding-and-programming--software-development-and-it.jpg" alt="3 computer screen, middle one says Code.">
                     <img class="pics" src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/Htmlcss.png" alt="HTML5 + CSS3">
                     <img class="pics" src="https://www.vosp.us/wp-content/uploads/Under.jpg" alt="Website Under Construction with person figure on laptop">
                     <img class="pics" src="https://www.pennyrilecac.org/wp-content/uploads/2021/08/UnderConstruction-1.png" alt="Page Under Construction sign">
                     <img class="pics" src="https://static.vecteezy.com/system/resources/thumbnails/000/693/195/small/under-construction-chalkboard.jpg" alt="Under Construction sign with crane drawing">
-                </section>    
+                </section> 
+            </section>       
         </section>
-        <section class="content" id="contact">
-            <h2>Contact</h2>
+        <!--Made section class = contact-->
+        <section class="contact">
                 <nav>
                     <ul>
                         <li>
@@ -75,25 +74,19 @@
                 </nav>    
         </section>
     </section>
+    <!-- added aside container with aboutMe id -->
+    <aside id="aboutMe">
+        <h3>About Me</h3>
+    </aside>
+    <!-- added aside container with portfolio id -->
+    <aside id="portfolio">
+        <h3>Portfolio</h3>
+    </aside>
+    <!-- added aside container with contact id -->
+    <aside id="contact">
+        <h3>Contact</h3>
+    </aside>
 
-    <footer class="footer">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">787-479-1620</a>
-                </li>
-                <li>
-                    <a href="#">alfredojfigueroa@gmail.com</a>
-                </li>
-                <li>
-                    <a href="#">Github</a>
-                </li>
-                <li>
-                    <a href="#">LinkedIn</a>
-                </li>
-            </ul>
-        </nav>    
-    </footer>
 </body>
 
 </html>
