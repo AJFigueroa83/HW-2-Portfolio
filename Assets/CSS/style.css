@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+:root {
+  --neonGreen: rgb(1, 255, 1);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,10 +35,6 @@ header nav {
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 25px;
-}
-
-header nav ul {
-  list-style-type: none;
 }
 
 header nav ul li {
@@ -65,47 +65,12 @@ p {
   width: 75%;
   display: inline-block;
   margin-left: 20px;
-}
-
-aside {
-  margin-top: -950px;
-  margin-right: 20px;
-  padding: 20px;
-  clear: both;
-  float: right;
-  width: 20%;
-  height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #02008a;
-}
-
-.benefit p {
-  margin-bottom: 32px;
-  color: #ffffff;
-}
-
-.benefit h3 {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.benefit img {
-  display: block;
-  margin: 10px auto;
-  max-width: 150px;
-}
-
-.content {
   margin-bottom: 20px;
   padding: 50px;
-  height: 300px;
+  height: 600px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #02008a;
   color: #ffffff;
-}
-
-.content img {
-  max-height: 200px;
 }
 
 .content h2 {
@@ -119,10 +84,6 @@ aside {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   display: inline-block;
-}
-
-.footer h2 {
-  font-size: 20px;
 }
 
 .hero-text p {
@@ -143,8 +104,6 @@ aside {
   height: 200px;
 }
 
-#first-code {
-  position: relative;
-  width: 600px;
-  height: 400px;
+.pics:hover {
+  box-shadow: inset 0px 0px 8px var(--neonGreen), 0 0 15px var(--neonGreen);
 }
