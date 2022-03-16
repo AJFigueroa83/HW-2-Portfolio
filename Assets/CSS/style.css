@@ -6,7 +6,7 @@
 :root {
   --coolGlow: blue;
 }
-}
+
 html {
   scroll-behavior: smooth;
 }
@@ -70,7 +70,7 @@ p {
   right: 20px;
 }
 
-.aboutMe {
+.aboutMe-container, .contact-container {
   position: relative;
   left: 400px;
   width: 75%;
@@ -82,21 +82,25 @@ p {
   color: #000000;
 }
 
+.contact-container {
+  font-size: 30px;
+  display: inline-flex;
+}
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.pics-column {
-  display: flex;
-  flex-direction: column;
-}
-.justify-center {
+/* .justify-center {
   justify-content: center;
-}
-.contact a {
+} */
+
+.contact-container a {
   color: red;
+  display: inline-block;
+  position: relative;
+  bottom: -400px;
 }
 
 #first-code {
@@ -104,7 +108,7 @@ p {
   height: 500px;
 }
 /* still need to make images stack in colums under the bigger image */
-.pics {
+img {
   display: flex;
   flex-wrap: wrap;
   width: 350px;
@@ -112,8 +116,75 @@ p {
   padding: 5px;
   border: #7fd6bc solid 2px;
 }
+
+.flex-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  border: 2px solid black;
+  left: 450px;
+}
 /* added hover selector to make images glow */
-.pics:hover {
+img:hover {
   box-shadow: inset 0px 0px 8px var(--coolGlow), 0 0 15px var(--coolGlow);
 }
 
+.aside {
+  position: relative;
+  top: -400px;
+}
+
+#aboutMe {
+  position: relative;
+  top: -1030px;
+  display: block;
+  width: 25%;
+  font-size: 75px;
+  padding: 100px 20px;
+  margin-right: 20px;
+  border-right: 10px solid black;
+}
+
+#portfolio {
+  position: relative;
+  top: -930px;
+  display: block;
+  width: 25%;
+  font-size: 75px;
+  padding: 500px 20px;
+  margin-right: 20px;
+  border-right: 10px solid black;
+}
+
+#contact {
+  position: relative;
+  bottom: 800px;
+  display: block;
+  width: 25%;
+  font-size: 75px;
+  padding: 100px 20px;
+  margin-right: 20px;
+  border-right: 10px solid black;
+}
+
+@media screen and (max-width: 992px) {
+  img .aside, .contact, .aboutMe nav ul li {
+    width: 50%;
+  }
+  /* Change the header color */
+  header {
+    background: #772014;
+  }
+}
+
+/* Cards are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+  img .aside, .contact, .aboutMe nav ul li {
+    width: 100%;
+  }
+  /* Change the header color */
+  header {
+    background: #8ac4ff;
+  }
+}
