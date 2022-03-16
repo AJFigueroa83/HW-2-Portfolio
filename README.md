@@ -15,4 +15,4 @@ So That they can easily view my portfolio and hire me.
 
 ## Mock Up
 
-![This is an image](.assets/images/screenshot.png)
+![Alfredo J. Figueroa portfolio with underconstruction images](/Assets/images/screenshot.png)
