@@ -6,7 +6,7 @@
 :root {
   --coolGlow: blue;
 }
-
+/* gives scrolling effect to take the user to a specific section of the screen */
 html {
   scroll-behavior: smooth;
 }
@@ -34,11 +34,15 @@ header nav {
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
 }
 
 header nav ul li {
   display: inline-block;
   margin-left: 25px;
+  flex-wrap: wrap;
 }
 
 a {
@@ -72,29 +76,33 @@ p {
 
 .main-container {
   position: absolute;
+  width: 75%;
+  right: 150px;
 }
 
 .aboutMe-container {
   position: relative;
-  left: 400px;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
+  left: 90px;
   margin: 20px;
-  padding: 50px;
+  padding: 30px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #000000;
 }
 
-/* .row {
+.row {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-} */
+  flex-direction: row;
+  margin-right: 900px;
+}
 
-/* .justify-center {
+.justify-center {
   justify-content: center;
-} */
+}
 
 #first-code {
   width: 700px;
@@ -111,12 +119,24 @@ img {
   border: #7fd6bc solid 2px;
 }
 
+/* mobile first approach, setting base column width to be 100%  */
+.pics-column {
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
 .flex-container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  min-height: 100%;
   width: 700px;
-  left: 750px;
+  left: 300px;
+  bottom: -50px;
 }
 
 .img-container {
@@ -144,7 +164,7 @@ img:hover {
   width: 300px;
   font-size: 30px;
   color: red;
-  bottom: -150px;
+  bottom: -275px;
   left: 600px;
   list-style-type: none;
   padding: 20px;
@@ -163,7 +183,6 @@ aside {
   width: 20%;
   height: 100%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* background-color: #2589bd; */
   border-right: 10px dotted black;
 }
 
@@ -192,4 +211,26 @@ aside {
   font-size: 60px;
   padding: 100px 20px;
   margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .pics-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+ .pics-column:last-child {
+   flex-grow: 1;
+ } 
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    width: 100%;
+  }
+
+  .pics-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
 }
